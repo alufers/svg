@@ -36,6 +36,9 @@ func (p Path) newSegment(start [2]float64) *Segment {
 }
 
 func (s *Segment) addPoint(p [2]float64) {
+	if s.Points == nil {
+		s.Points = [][2]float64{}
+	}
 	s.Points = append(s.Points, p)
 }
 
